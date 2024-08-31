@@ -86,9 +86,9 @@ def professores():
                            user_all=user_all, role_all = role_all);
 
 
-@app.route('/avaliacao')
+@app.route('/')
 def avaliacao():
-    return render_template('avaliacao.html')
+    return render_template('index.html')
 
 
 
