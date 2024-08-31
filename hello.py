@@ -64,7 +64,7 @@ def internal_server_error(e):
 
 
 @app.route('/professores', methods=['GET', 'POST'])
-def professores():
+def index():
     form = NameForm()
     user_all = User.query.all();
     role_all = Role.query.all();
@@ -86,7 +86,7 @@ def professores():
                            user_all=user_all, role_all = role_all);
 
 
-@app.route('/')
+@app.route('/index')
 def avaliacao():
     return render_template('index.html')
 
