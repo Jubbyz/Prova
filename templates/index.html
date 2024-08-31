@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Avaliação Semestral</h1>
+    <h3>Aluno: João Victor Silva Pereira</h3>
+    <h3>Prontuário: PT3019837</h3> <BR>
+</div>
+{{ wtf.quick_form(form) }}
+
+<BR><p>A data e hora local é {{ moment(current_time).format('LLL') }}.</p>
+
+{% endblock %}
